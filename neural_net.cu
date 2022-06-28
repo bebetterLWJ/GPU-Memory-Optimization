@@ -46,8 +46,6 @@ __global__ void inferClass(T* O, int* pred_y, int batch_size, int num_classes) {
 
 //表明类的函数
 void NeuralNet::computeLoss() {
-
-	//checkCudaErrors(cudaMemcpy(loss, h_loss, batch_size * sizeof(float), cudaMemcpyHostToDevice));
 	//	checkCudaErrors(cudaMemcpy(h_loss, loss, batch_size * sizeof(float), cudaMemcpyDeviceToHost));
 
 	if (layer_type[num_layers - 1] == SOFTMAX) {
