@@ -4,6 +4,7 @@
 #include <string>
 #include "cuda_runtime_api.h"
 using namespace std;
+//neuralnet
 template <typename T>
 __global__ void softmaxLossBackProp(int* y, T* SO, T* dSO, int batch_size, int output_size, float eps) {
 	int i = blockIdx.x * blockDim.x + threadIdx.x;
